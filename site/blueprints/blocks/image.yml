@@ -1,0 +1,97 @@
+name: field.blocks.image.name
+icon: image
+preview: image
+tabs:
+  content:
+    fields:
+      location:
+        label: field.blocks.image.location
+        type: radio
+        columns: 2
+        default: "kirby"
+        options:
+          kirby: Kirby
+          web: Web
+      image:
+        label: field.blocks.image.name
+        type: files
+        multiple: false
+        image:
+          back: black
+        uploads: false
+        when:
+          location: kirby
+      src:
+        label: Image URL
+        type: url
+        when:
+          location: web
+      alt:
+        label: field.blocks.image.alt
+        type: text
+        icon: title
+      caption:
+        label: field.blocks.image.caption
+        type: writer
+        icon: text
+        inline: true
+      link:
+        label: field.blocks.image.link
+        type: text
+        icon: url
+      ratio:
+        label: field.blocks.image.ratio
+        type: select
+        placeholder: Auto
+        width: 1/2
+        options:
+          1/1: "1:1"
+          16/9: "16:9"
+          10/8: "10:8"
+          21/9: "21:9"
+          7/5: "7:5"
+          4/3: "4:3"
+          5/3: "5:3"
+          3/2: "3:2"
+          3/1: "3:1"
+      crop:
+        label: field.blocks.image.crop
+        type: toggle
+        width: 1/2
+  settings:
+    label: Settings
+    fields: 
+      textcolour:
+        type: color
+        label: Text Colour 
+        help: Text colour for DIV. Leave blank for page default.
+        width: 1/2
+        default: ''
+        presets:
+          - '#4B4B4B'
+          - '#009536'
+          - '#A83707'
+          - '#5C899B'
+          - '#F4F5F5'
+          - '#C3C3C3'
+          - '#FFFFFF'
+          - '#000000'
+      bgcolour:
+        type: color
+        label: Background Colour 
+        help: Background colour for DIV. Leave blank for page default.
+        width: 1/2
+        default: ''
+        presets:
+          - '#4B4B4B'
+          - '#009536'
+          - '#A83707'
+          - '#5C899B'
+          - '#F4F5F5'
+          - '#C3C3C3'
+          - '#FFFFFF'
+          - '#000000'
+      sectionid:
+        type: text
+        label: ID
+        help: Assign unique ID for linking directly to block.

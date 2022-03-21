@@ -1,0 +1,55 @@
+Title: IDENTITY
+
+----
+
+Description: 
+
+----
+
+Keywords: 
+
+----
+
+Ogimage: 
+
+----
+
+Logoimage:
+
+- g10.svg
+
+----
+
+Faviconimage: 
+
+----
+
+Touchimage: 
+
+----
+
+Googleanalyticsid: 
+
+----
+
+Instagramname: identity.by
+
+----
+
+Telephone: +64 21 123 4305
+
+----
+
+Email: info@identityby.com
+
+----
+
+Address: 34 Spring Street, Auckland, New Zealand
+
+----
+
+Addresslat: 
+
+----
+
+Addresslong: 

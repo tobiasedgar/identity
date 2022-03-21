@@ -1,0 +1,17 @@
+Title: Home
+
+----
+
+Heading: 
+
+----
+
+Description: 
+
+----
+
+Sitemap: true
+
+----
+
+Pagebuilder: [{"content":{"togglepagination":"false","images":["hero.png"],"herosummary":"HAIR TRANSPLANT SURGERY IS A PROCEDURE WHERE SMALL, NATURALLY-OCCURRING GROUPS OF HAIRS ARE TAKEN FROM THE BACK OF THE SCALP AND IMPLANTED IN THE AREAS OF THINNING OR BALDING.","herotext":"Identity is a hair transplant clinic based in Auckland and Melbourne. Created by former (bald) All Black Israel Dagg, and Dr. Vikram Jayaprakash, who is considered as one of the pioneers of modern hair transplant surgery in Australia and New Zealand. <br>Dr. Vikram Jayaprakash and Israel met in 2017 when Vikram gave Izzy hair transplant surgery, since then Izzy has a new full head of hair, and hundreds of men approaching him daily on where and how he succeeded such a miracle. <br><br>You now can achieve the same results."},"id":"151ef860-4c51-4722-bd55-af21d98747bd","isHidden":false,"type":"hero"},{"content":{"accordiantitle":"Our Services","accordion":[{"accordionsummary":"The Management","accordiondetails":"At Identity, we believe in a holistic and thorough approach to the management of your hairless. We understand hair, and more importantly are skilled at managing all aspects of hair loss.","accordiontext":"Our services include:<br><br><strong>1. Medical Management of Hair Loss.<br><\/strong>Medical therapy is designed to maintain existing hair and also to try and prevent further loss of hair. This involves a discussion with our surgeon and personalised medical therapy tailored to your needs.<br><br><strong>2. Hair Transplant Surgery.<br><\/strong>Hair Transplant Surgery involves removing strong healthy hairs from the back of the head and transplanting them one follicle at a time into the an area that requires more hair known as the recipient area to create a natural, full and dense look. At Identity, our surgeon is skilled at performing but FUE and FUT surgery. This either involves punching out each individual graft one at a time or cutting out a strip of hair and dissecting that into the individual grafts. TBother techniques produce an excellent and a natural looking outcome. During your consultation with Dr Vikram, you will have a full discussion about both techniques and decide which one will be more suitable for you."},{"accordionsummary":"The Proccess","accordiondetails":"We want to make this as easy and stress free as possible.","accordiontext":"So, just visit our contact us page and send us a description of what\u2019s happening with your hair and preferably a recent photo. We will then get back to you with an estimate of what you will need. If you are happy to proceed, we will arrange a consult with Dr Vikram via zoom to discuss your individual requirements. Our team will then be in touch to discuss scheduling your surgical date and walk you through the entire process."}],"position":"full"},"id":"0f128aba-2526-4f9f-b33f-d0569b688cbe","isHidden":false,"type":"accordian"},{"content":[],"id":"b6e111e0-8f3c-450b-a474-f6eefc71a2a6","isHidden":false,"type":"instagram"}]

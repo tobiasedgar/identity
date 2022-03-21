@@ -1,0 +1,52 @@
+name: field.blocks.list.name
+icon: list-bullet
+wysiwyg: true
+preview: list
+tabs:
+  content:
+    fields:
+      text:
+        label: field.blocks.list.name
+        type: list
+        marks:
+          - bold
+          - italic
+          - underline
+          - link
+  settings:
+    label: Settings
+    fields: 
+      textcolour:
+        type: color
+        label: Text Colour 
+        help: Text colour for DIV. Leave blank for page default.
+        width: 1/2
+        default: ''
+        presets:
+          - '#4B4B4B'
+          - '#009536'
+          - '#A83707'
+          - '#5C899B'
+          - '#F4F5F5'
+          - '#C3C3C3'
+          - '#FFFFFF'
+          - '#000000'
+      bgcolour:
+        type: color
+        label: Background Colour 
+        help: Background colour for DIV. Leave blank for page default.
+        width: 1/2
+        default: ''
+        presets:
+          - '#4B4B4B'
+          - '#009536'
+          - '#A83707'
+          - '#5C899B'
+          - '#F4F5F5'
+          - '#C3C3C3'
+          - '#FFFFFF'
+          - '#000000'
+      sectionid:
+        type: text
+        label: ID
+        help: Assign unique ID for linking directly to block.

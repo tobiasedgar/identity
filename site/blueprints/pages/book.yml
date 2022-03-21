@@ -1,0 +1,146 @@
+title: Book
+icon: 🏠
+options:
+  delete: false
+  changeTemplate: false
+
+tabs:
+#   content:
+#     label: Page Settings
+#     columns:
+#       - width: 2/3
+#         fields:
+#           heading:
+#             type: text
+#             label: Page Title
+#             placeholder: "{{ page.title }}"
+#             help: Leave empty to use the title as headline
+#           description:
+#             type: writer
+#             label: Page Description
+#             size: medium
+#             help: Leave empty to use the site description meta
+#             marks:
+#               - bold
+#               - italic
+#               - underline
+#               - link
+#       - width: 1/3
+#         fields:
+#           sitemap:
+#             extends: fields/sitemap
+#             width: 1/2
+#             help: Adding content to your site's sitemap helps your search engine rankings.
+ 
+  Builder:
+    label: Content
+    columns:
+      - width: 1/2
+        fields:
+          formspark:
+            type: text
+            width: 1/2
+            label: Formspark Endpoint
+            placeholder: "https://submit-form.com/xxxxxxxx"
+            icon: url
+            help: Connects form to Formspark repository.
+          uploadcare:
+            type: text
+            width: 1/2
+            label: Uploadcare Endpoint
+            placeholder: "f0ec234f04208e306bb9"
+            icon: url
+            help: Allows file uploads to Formspark repository.
+          formspark:
+            type: text
+            width: 1/2
+            label: Formspark Endpoint
+            placeholder: "https://submit-form.com/xxxxxxxx"
+            icon: url
+            help: Connects form to Formspark repository.
+          interestedIn:
+            label: Intersted In
+            type: structure
+            help: Options for "Interested In" dropdown
+            fields:
+              option:
+                type: text
+                label: Option
+          howMuch:
+            label: How much hair are you after?
+            type: structure
+            help: Options for "How much hair are you after" dropdown
+            fields:
+              option:
+                type: text
+                label: Option
+          time:
+            label: Time
+            type: structure
+            help: Options for "Time" dropdown
+            fields:
+              option:
+                type: text
+                label: Option
+
+      - width: 1/2
+        fields:
+          info:
+            type: writer
+            inline: true
+            marks:
+              - bold
+              - italic
+              - underline
+            label: Info Text
+          firstlink:
+            label: First Button, Link
+            type: select
+            help: Select the page the button sends you to
+            width: 1/4
+            options:
+              home: Home
+              about: About
+              portfolio: Portfolio
+              faqs: FAQs
+              Contact: Contact
+              book: Book Now
+          firsttext:
+            label: Text
+            type: text
+            width: 1/4
+            help: The text that is show inside the button (will display link text if field is empty)
+          secondlink:
+            type: select
+            label: Second Button, Link
+            help: Select the page the button sends you to
+            width: 1/4
+            options:
+              home: Home
+              about: About
+              portfolio: Portfolio
+              faqs: FAQs
+              Contact: Contact
+              book: Book Now          
+          secondtext:
+            labe: text
+            type: text
+            width: 1/4
+            help: The text that is show inside the button (will display link text if field is empty)
+
+      
+
+            
+  #     -width: 1/3
+  #       fields:
+  #         form:
+  #           type: text
+  #           label: Formspree Endpoint
+  #           placeholder: "https://formspree.io/f/xxxxxxxx"
+  #           icon: url
+  #           help: Connects footer form to Formspree repository.
+
+  files:
+    sections:
+      fileuploader:
+        extends: sections/uploader

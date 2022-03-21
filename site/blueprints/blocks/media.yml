@@ -1,0 +1,39 @@
+name: Single Media
+icon: image
+preview: false
+
+tabs:
+  content:
+    fields:
+       fixed:
+        type: toggle
+        label: Stick to top of screen
+        width: 1/2
+      format:
+        type: select
+        label: Media Type
+        required: true
+        default: single
+        options:
+          single: Single Image
+          video: Video
+        width: 1/2
+      img: 
+        extends: fields/uploader
+        label: Single Image
+        max: 1
+        layout: cards
+        size: small
+        width: 1/2
+        image:
+          ratio: 16/9
+        when:
+          format: single
+      video:
+        label: Video
+        type: text
+        help: Use full video URL to embed. Must end in .mp4
+        icon: url
+        when:
+          format: video
+          

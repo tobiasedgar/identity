@@ -1,0 +1,35 @@
+name: Image & Text
+icon: grid-left
+preview: hero
+tabs:
+  content:
+    fields:
+      togglepagination:
+        label: Section Layout
+        help: Chooses which side the hero image is displayed on
+        type: toggle
+        width: 1/2
+        text:
+          - "Left"
+          - "Right"
+      images:
+        label: Image
+        type: files
+        multiple: false
+        width: 1/2
+        layout: cards
+        rewuired: true
+        max: 1
+        empty: Empty
+        uploads: false
+        image:
+          ratio: 16/9
+      aboutsummary:
+        label: Section Summary
+        required: true
+        extends: fields/writer
+        width: 1/2
+      abouttext:
+        label: Section Text
+        extends: fields/writer
+        width: 1/2

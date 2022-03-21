@@ -1,0 +1,13 @@
+name: field.blocks.text.name
+icon: text
+wysiwyg: true
+fields:
+  text:
+    extends: fields/writer
+    required: true
+    nodes: false
+    placeholder: field.blocks.heading.text
+    marks: 
+      - bold
+      - underline
+      - link

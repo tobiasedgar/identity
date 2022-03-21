@@ -1,0 +1,53 @@
+name: Contact Accordion
+icon: phone
+
+tabs:
+  content:
+    fields:
+      accordianTitle:
+        type: text
+        label: Title Text
+      contactaccordion:
+        type: structure
+        label: Contact Accordion
+        fields:
+          contactName:
+            type: text
+            label: Contact Name
+            required: true
+          contactAddressStreet:
+            type: text
+            label: Street adress
+            width: 1/3
+            required: true
+          contactAddressCity:
+            type: text
+            label: City
+            width: 1/3
+            required: true
+          contactAddressCountry:
+            type: text
+            label: Country
+            width: 1/3
+            required: true
+          contactPhone:
+            type: text
+            label: Phone Number
+            required: true
+          contactEmail:
+            type: text
+            label: Email Address
+            required: true
+          contactAbout:
+            extends: fields/writer
+            label: About Contact
+      position:
+        type: select
+        label: Accordion Width
+        default: full
+        required: true
+        width: 1/2
+        options:
+          half: 1/2 Screen
+          threequater: 3/4 Screen
+          full: Full Screen

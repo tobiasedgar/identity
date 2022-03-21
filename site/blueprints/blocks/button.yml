@@ -1,0 +1,41 @@
+name: Buttons
+icon: bolt
+fields:
+  button:
+    type: structure
+    label: Buttons
+    fields:
+      link:
+        type: select
+        help: Select the page the button sends you to
+        width: 1/2
+        options:
+          home: Home
+          about: About
+          portfolio: Portfolio
+          faqs: FAQs
+          Contact: Contact
+          book: Book Now
+      text:
+        type: text
+        width: 1/2
+        help: The text that is show inside the button
+  buttonText:
+    type: textarea
+    label: Info Text
+    width: 1/2
+    marks:
+      - bold
+      - italic
+      - underline
+      - link
+  buttonTextToggle:
+    label: Buttons layout
+    help: Chooses to show "Info Text" above or below buttons
+    type: toggle
+    width: 1/2
+    text:
+      - "Below"
+      - "Above"
+      
+

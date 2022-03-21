@@ -1,0 +1,17 @@
+Title: Contact
+
+----
+
+Heading: 
+
+----
+
+Description: 
+
+----
+
+Sitemap: true
+
+----
+
+Pagebuilder: [{"content":{"accordiantitle":"Contact Us","contactaccordion":[{"contactname":"Israel Dagg","contactaddressstreet":"34 Spring Street","contactaddresscity":"Auckland","contactaddresscountry":"Newzealnd","contactphone":"021 123 4567","contactemail":"israel@identity.co","contactabout":"Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur."},{"contactname":"Dr Vikram","contactaddressstreet":"42 Wallaby Way","contactaddresscity":"Sydney","contactaddresscountry":"Australia","contactphone":"021 987 6543","contactemail":"vikram@identity.co","contactabout":"Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur"},{"contactname":"Clinic","contactaddressstreet":"34 Spring Street","contactaddresscity":"Auckland","contactaddresscountry":"NewZealand","contactphone":"021 765 9876","contactemail":"clinic@identity.co","contactabout":""},{"contactname":"General","contactaddressstreet":"34 Spring Street","contactaddresscity":"Auckland","contactaddresscountry":"New Zealand","contactphone":"021 123 4567","contactemail":"general@identity.co","contactabout":""}],"position":"full"},"id":"bfc942bb-23a7-42e6-8036-af515fce5715","isHidden":false,"type":"contactaccordian"},{"content":{"button":[{"link":"book","text":"Book Now"},{"link":"faqs","text":"Our FAQs"}],"buttontext":"","buttontexttoggle":"false"},"id":"a907afd4-88e2-4c72-9682-bf5bce3c0574","isHidden":false,"type":"button"}]

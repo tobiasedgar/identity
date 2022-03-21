@@ -1,0 +1,35 @@
+name: Info Accordion
+icon: map
+
+tabs:
+  content:
+    fields:
+      accordianTitle:
+        type: text
+        label: Title Text
+      accordion:
+        type: structure
+        label: Accordion
+        fields:
+          accordionSummary:
+            type: text
+            label: Summary Text
+            required: true
+          accordionDetails:
+            extends: fields/writer
+            label: Details Text
+          accordionText:
+            label: Dropdown Text
+            required: true
+            extends: fields/writer
+            size: large
+      position:
+        type: select
+        label: Accordion Width
+        default: full
+        required: true
+        width: 1/2
+        options:
+          half: 1/2 Screen
+          threequater: 3/4 Screen
+          full: Full Screen

@@ -1,0 +1,38 @@
+.k-block-type-carousel ul {
+    display: grid;
+    grid-gap: .75rem;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+    line-height: 0;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer
+}
+
+.k-block-type-carousel li:empty {
+    padding-bottom: 100%;
+    background: #efefef
+}
+
+.k-block-type-carousel li {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.k-block-type-carousel li img {
+    flex-grow: 1;
+    max-width: 100%
+}
+
+.k-block-type-carousel p {
+    width: min-content;
+    white-space: nowrap;
+}
+
+.k-block-type-carousel k-block-data {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}

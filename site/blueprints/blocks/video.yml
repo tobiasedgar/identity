@@ -1,0 +1,41 @@
+name: field.blocks.video.name
+icon: video
+preview: video
+tabs:
+  content:
+    fields:
+      videolayouttoggle:
+        label: Is This video at the top of the page?
+        type: toggle
+        default: "Yes"
+        help: If video is at top it will fit to top the screen
+        text:
+          - "No"
+          - "Yes"
+      videotoggle:
+        label: Video Source Toggle
+        type: radio
+        columns: 2
+        default: "iframe"
+        options:
+          iframe: iFrame URL
+          embed: Embed URL
+      embed:
+        label: Embed Video URL
+        type: url
+        help: URL contains .mp4
+        placeholder: https://player.vimeo.com/external/
+        when:
+          videotoggle: embed
+      url:
+        label: iFrame Video URL
+        type: url
+        placeholder: field.blocks.video.url.placeholder
+        help: URL for iFrame
+        when:
+          videotoggle: iframe
+      caption:
+        label: field.blocks.video.caption
+        type: writer
+        inline: true
+ 

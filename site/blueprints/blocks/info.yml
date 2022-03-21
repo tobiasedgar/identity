@@ -1,0 +1,23 @@
+name: Info
+icon: text
+wysiwyg: true
+preview: info
+tabs:
+  content:
+    fields:
+      info:
+        type: writer
+        nodes: false
+        placeholder: field.blocks.info.placeholder
+        marks:
+          - bold
+          - italic
+          - underline
+          - link
+  settings:
+    label: Settings
+    fields: 
+      sectionid:
+        type: text
+        label: ID
+        help: Assign unique ID for linking directly to block.

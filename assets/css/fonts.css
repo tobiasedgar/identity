@@ -1,0 +1,51 @@
+/* @import url(//db.onlinewebfonts.com/c/2206d6cc490084998d531e8c1b2cbb4a?family=Druk+Wide+Bold);
+@font-face {font-family: "Druk Wide Bold"; src: url("//db.onlinewebfonts.com/t/2206d6cc490084998d531e8c1b2cbb4a.eot"); src: url("//db.onlinewebfonts.com/t/2206d6cc490084998d531e8c1b2cbb4a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/2206d6cc490084998d531e8c1b2cbb4a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/2206d6cc490084998d531e8c1b2cbb4a.woff") format("woff"), url("//db.onlinewebfonts.com/t/2206d6cc490084998d531e8c1b2cbb4a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/2206d6cc490084998d531e8c1b2cbb4a.svg#Druk Wide Bold") format("svg"); } */
+
+/* @import url(//db.onlinewebfonts.com/c/9527a4c4f55e8075eb6a60fe577d89c4?family=Px+Grotesk+Regular);
+@font-face {font-family: "Px Grotesk"; src: url("//db.onlinewebfonts.com/t/9527a4c4f55e8075eb6a60fe577d89c4.eot"); src: url("//db.onlinewebfonts.com/t/9527a4c4f55e8075eb6a60fe577d89c4.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9527a4c4f55e8075eb6a60fe577d89c4.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9527a4c4f55e8075eb6a60fe577d89c4.woff") format("woff"), url("//db.onlinewebfonts.com/t/9527a4c4f55e8075eb6a60fe577d89c4.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9527a4c4f55e8075eb6a60fe577d89c4.svg#Px Grotesk Regular") format("svg"); } */
+
+
+
+
+  @font-face {
+    font-family: 'Px Grotesk';
+    src: url('../fonts/PxGroteskRegular.eot');
+    src: url('../fonts/PxGroteskRegular.eot') format('embedded-opentype'),
+      url('../fonts/PxGroteskRegular.woff2') format('woff2'),
+      url('../fonts/PxGroteskRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Druk Wide Medium';
+    src: url('../fonts/Druk-WideMedium.eot');
+    src: url('../fonts/Dru-WideMedium.eot') format('embedded-opentype'),
+      url('../fonts/Dru-kWideMedium.woff2') format('woff2'),
+      url('../fonts/Druk-WideMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Druk Wide Super';
+    src: url('../fonts/DrukWide-Super.eot');
+    src: url('../fonts/DrukWide-Super.eot') format('embedded-opentype'),
+      url('../fonts/DrukWide-Super.woff2') format('woff2'),
+      url('../fonts/DrukWide-Super.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+
+  /* @font-face {
+    font-family: 'PxGroteskRegular';
+    src: url('../fonts/Px-Grotest-Regular.otf') format("embedded-opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  } */
+

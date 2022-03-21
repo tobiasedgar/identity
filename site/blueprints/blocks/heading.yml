@@ -1,0 +1,65 @@
+name: field.blocks.heading.name
+icon: title
+wysiwyg: true
+preview: heading
+tabs:
+  content:
+    fields:
+      level:
+        label: field.blocks.heading.level
+        type: select
+        empty: false
+        default: "h2"
+        width: 1/6
+        options:
+          - h1
+          - h2
+          - h3
+      text:
+        label: field.blocks.heading.text
+        type: writer
+        inline: true
+        width: 5/6
+        placeholder: field.blocks.heading.placeholder
+        marks:
+          - bold
+          - italic
+          - underline
+          - link
+  settings:
+    label: Settings
+    fields: 
+      textcolour:
+        type: color
+        label: Text Colour 
+        help: Text colour for DIV. Leave blank for page default.
+        width: 1/2
+        default: ''
+        presets:
+          - '#4B4B4B'
+          - '#009536'
+          - '#A83707'
+          - '#5C899B'
+          - '#F4F5F5'
+          - '#C3C3C3'
+          - '#FFFFFF'
+          - '#000000'
+      bgcolour:
+        type: color
+        label: Background Colour 
+        help: Background colour for DIV. Leave blank for page default.
+        width: 1/2
+        default: ''
+        presets:
+          - '#4B4B4B'
+          - '#009536'
+          - '#A83707'
+          - '#5C899B'
+          - '#F4F5F5'
+          - '#C3C3C3'
+          - '#FFFFFF'
+          - '#000000'
+      sectionid:
+        type: text
+        label: ID
+        help: Assign unique ID for linking directly to block.

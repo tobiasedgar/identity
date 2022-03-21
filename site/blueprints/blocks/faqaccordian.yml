@@ -1,0 +1,31 @@
+name: FAQ Accordion
+icon: question
+
+tabs:
+  content:
+    fields:
+      accordianTitle:
+        type: text
+        label: Title Text
+      faqaccordion:
+        type: structure
+        label: FAQs Accordion
+        fields:
+          faqTitle:
+            type: text
+            label: FAQ
+            required: true
+          faqDetails:
+            extends: fields/writer
+            label: FAQ Answer
+            required: true      
+      position:
+        type: select
+        label: Accordion Width
+        default: threequater
+        required: true
+        width: 1/2
+        options:
+          half: 1/2 Screen
+          threequater: 3/4 Screen
+          full: Full Screen

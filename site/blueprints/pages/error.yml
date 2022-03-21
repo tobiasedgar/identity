@@ -1,0 +1,70 @@
+title: Error
+icon: 🚫
+options:
+  delete: false
+  changeTemplate: false
+  changeStatus: false
+  duplicate: false
+
+tabs:
+  # settings:
+  #   label: Settings
+  #   columns:
+  #     - width: 2/3
+  #       fields:
+  #         heading:
+  #           type: text
+  #           label: Page Title
+  #           placeholder: "{{ page.title }}"
+  #           help: Leave empty to use the title as the headline.
+  #         description:
+  #           extends: fields/writer
+  #           label: Page Description
+  #           help: Leave empty to use the site description meta.
+  #         sitemap:
+  #           extends: fields/sitemap
+  #           width: 1/2
+  #           help: Adding content to sitemap helps search engine rankings.
+  #     - width: 1/3
+  #       fields:
+  #         banner: 
+  #           extends: fields/uploader
+  #           label: Banner Image
+  #           max: 1
+  #           layout: cards
+  #           size: small
+  #           image:
+  #             ratio: 16/9
+          
+  content:
+    label: Content
+    columns:
+      - width: 1
+        fields:
+          pagebuilder:
+            label: Block Layout
+            type: blocks
+            fieldsets:
+              text:
+                type: group
+                label: Text
+                fieldsets:
+                  - heading
+                  - text
+                  - accordion
+              media:
+                label: Media
+                type: group
+                fieldsets:
+                  - media
+              other:
+                label: Other
+                type: group
+                fieldsets:
+                  - stats
+                  - partners
+
+  files:
+    sections:
+      fileuploader:
+        extends: sections/uploader

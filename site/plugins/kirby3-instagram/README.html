@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+
+<h1 id="kirby3instagramfeed">Kirby3 Instagram feed</h1>
+
+<p>Fetch instagram photos without the need for app aproval. This plugin will download the photos and/or video thumbnails to local storage. All media will be stored in a json file.</p>
+
+<p>Only the 20 latest photo&#8217;s will be stored.</p>
+
+<p>This plugin uses the <strong>basic user access token</strong> which you can generate for all testusers of your instagram app. (https://developers.facebook.com/docs/instagram-basic-display-api/overview#user-token-generator)</p>
+
+<h2 id="options">Options</h2>
+
+<p>Required are the <strong><code>client_id</code></strong> (Instagram App ID) and <strong><code>client_secret</code></strong> (Instagram App Secret).
+All other options are optional.</p>
+
+<pre><code class="php"># site/config/config.php
+return [
+    'genxbe.instagram' =&gt; [
+        'client_id' =&gt; '',
+        'client_secret' =&gt; '',
+        'assetFolder' =&gt; 'instagram',
+        'mediaFolder' =&gt; 'media',
+        'db' =&gt; 'instagram.json',
+    ],
+];
+</code></pre>
+
+<h2 id="usage">Usage</h2>
+
+<ul>
+<li><p>find a place to add the <code>instagramLink</code> blueprint</p></li>
+<li><p>Add your client_id and client_secret to your config file, all other options are optional.</p></li>
+<li><p>Don&#8217;t forget to add your website redirect uri to the <strong>Valid OAuth Redirect URIs</strong></p>
+
+<ul>
+<li><p>You can add multiple website and thus use 1 app for all of your websites</p></li>
+<li><p>Format of the url you need to add is <code>https://yoursite.com/axi/instagram</code></p></li>
+</ul></li>
+<li><p>Add the instagram account you want to use to the test users and ask them to accept the invite (instructions below)</p></li>
+<li><p>Ask your user to enable the instagram link on the website, when this process is completed a first time fetch will already be done.</p></li>
+<li><p>After the user has linked his Instagram you can start fetching via <code>php site/plugins/kirby3-instagram/fetch.php</code></p></li>
+<li><p>If you want to have regular updates you need to schedule this command via the cron. I would advise to do this every 30 or 60 minutes so you don&#8217;t overload your API rate limit. (More info on https://developers.facebook.com/docs/graph-api/overview/rate-limiting/#platform-rate-limits)</p></li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<h4 id="addlinkinstagramtoblueprint">Add linkInstagram to blueprint</h4>
+
+<pre><code class="yaml">title: Site
+preset: pages
+unlisted: true
+
+fields:
+  linkInstagram: linkInstagram
+</code></pre>
+
+<h4 id="afterthefirstfetchyoucanstartparsingthefeed">After the first fetch you can start parsing the feed</h4>
+
+<p>You can check for a count of the feed to hide the block when no media is available yet.
+Since we work with collections you can also use fieldMethods like <code>limit</code>, <code>filterBy</code>, etc&#8230;</p>
+
+<pre><code class="php">&lt;h1&gt;&lt;?= $page-&gt;title() ?&gt;&lt;/h1&gt;
+
+&lt;?php if(count(instagramFeed())): ?&gt;
+
+    &lt;?php foreach(instagramFeed() as $media): ?&gt;
+
+        &lt;a href=&quot;&lt;?= $media['permalink']; ?&gt;&quot; target=&quot;_blank&quot;&gt;
+            &lt;img src=&quot;assets/instagram/media/&lt;?= $media['id']; ?&gt;.jpg&quot; width=&quot;100&quot; height=&quot;100&quot; /&gt;
+        &lt;/a&gt;
+
+    &lt;?php endforeach; ?&gt;
+
+    &lt;?php foreach(instagramFeed()-&gt;limit(5) as $media): ?&gt;
+
+        &lt;a href=&quot;&lt;?= $media['permalink']; ?&gt;&quot; target=&quot;_blank&quot;&gt;
+            &lt;img src=&quot;assets/instagram/media/&lt;?= $media['id']; ?&gt;.jpg&quot; width=&quot;100&quot; height=&quot;100&quot; /&gt;
+        &lt;/a&gt;
+
+    &lt;?php endforeach; ?&gt;
+
+&lt;?php endif; ?&gt;
+</code></pre>
+
+<p>Fields that can be used in the $media array based on the example above.</p>
+
+<ul>
+<li><code>$media['id']</code></li>
+<li><code>$media['timestamp']</code></li>
+<li><code>$media['media_type']</code></li>
+<li><code>$media['media_url']</code></li>
+<li><code>$media['caption']</code></li>
+<li><code>$media['permalink']</code></li>
+<li><code>$media['username']</code></li>
+<li><code>$media['thumbnail_url']</code></li>
+</ul>
+
+<h4 id="setupcron">Setup cron</h4>
+
+<p>Every 30 minutes</p>
+
+<pre><code>*/30 * * * * cd /home/website/website.com/ &amp;&amp; php site/plugins/kirby3-instagram/fetch.php
+</code></pre>
+
+<p>Every hour</p>
+
+<pre><code>0 * * * * cd /home/website/website.com/ &amp;&amp; php site/plugins/kirby3-instagram/fetch.php
+</code></pre>
+
+<p>Faster is possible but do keep your rate limits in mind! (More info on https://developers.facebook.com/docs/graph-api/overview/rate-limiting/#platform-rate-limits)</p>
+
+<h2 id="plugininstallation">Plugin installation</h2>
+
+<h3 id="download">Download</h3>
+
+<p>Download and copy this repository to <code>/site/plugins/kirby3-instagram</code>.</p>
+
+<h3 id="gitsubmodule">Git submodule</h3>
+
+<pre><code>git submodule add https://github.com/genxbe/kirby3-instagram.git site/plugins/kirby3-instagram
+</code></pre>
+
+<h3 id="composer">Composer</h3>
+
+<pre><code>composer require genxbe/kirby3-instagram
+</code></pre>
+
+<h2 id="facebookappconfiguration">Facebook app configuration</h2>
+
+<p>Detailed instructions on: https://elfsight.com/blog/2016/05/how-to-get-instagram-access-token/ (step 1&#8211;2)</p>
+
+<ul>
+<li>Create a Facebook app</li>
+<li>Setup Instagram Basic display</li>
+<li> Important, your website OAuth url must be added as a valid OAuth redirect URI!</li>
+<li> All other url&#8217;s (deauthorize &amp; data deletion) don&#8217;t really matter, you can enter your own website there.</li>
+<li> Don&#8217;t request an app review</li>
+</ul>
+
+<h2 id="addingtestusers">Adding test users</h2>
+
+<p>Detailed instructions on: https://elfsight.com/blog/2016/05/how-to-get-instagram-access-token/ (step 3)</p>
+
+<ul>
+<li>Add the feed you want to show as instagram test user</li>
+<li>Make sure your test users accepts the test invitation</li>
+<li> More info on https://www.notion.so/genxbe/Link-instagram-with-your-website-9aa72c4961074cb4b4f9b5d1e6322e36</li>
+</ul>
+
+<h2 id="authenticatetheinstagramuserandrequestusertoken">Authenticate the instagram user and request User token</h2>
+
+<p>Follow instructions on https://www.notion.so/genxbe/Link-instagram-with-your-website-9aa72c4961074cb4b4f9b5d1e6322e36</p>
+
+<h2 id="usageonmultiplewebsites">Usage on multiple websites</h2>
+
+<p>You can use your 1 app for multiple sites by adding multiple OAuth redirect URI, please do keep your rate limit in mind. You can always create multiple facebook apps do divide the rate limit.</p>
+
+<h2 id="license">License</h2>
+
+<p>MIT</p>
+
+<h2 id="credits">Credits</h2>
+
+<ul>
+<li><a href="https://github.com/samzzi">Sam Serrien</a> @ <a href="https://github.com/genxbe">GeNx</a></li>
+</ul>
+
+</body>
+</html>
+
